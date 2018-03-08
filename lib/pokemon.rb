@@ -31,6 +31,6 @@ class Pokemon
     @hp = hp
 
     db.execute("UPDATE pokemon SET hp = #{@hp} WHERE pokemon.id = id;")
-    binding.pry
+    #binding.pry
   end
 end

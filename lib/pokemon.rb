@@ -26,7 +26,7 @@ class Pokemon
     #binding.pry
   end
 
-  def alter_hp(hp, db)
+  def alter_hp(new_hp, db)
     #find the object in db
     @hp = hp
 

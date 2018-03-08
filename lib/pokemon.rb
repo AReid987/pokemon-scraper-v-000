@@ -2,7 +2,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :hp, :db
 
   @@all = []
-  def initialize(id = nil, name = nil, type = nil, hp = nil, db = nil)
+  def initialize(id = nil, name = nil, type = nil, hp = 60, db = nil)
     @id = id
     @name = name
     @type = type
@@ -26,4 +26,11 @@ class Pokemon
     #binding.pry
   end
 
+  def alter_hp(hp, db)
+    #find the object in db
+    @hp = hp
+
+    @db.execute("UPDATE pokemon SET hp = #{@hp} WHERE pokemon.id = #{@id};")
+    binding.pry
+  end
 end

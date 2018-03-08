@@ -30,7 +30,7 @@ class Pokemon
     #find the object in db
     #@hp = hp
     binding.pry 
-    db.execute("UPDATE pokemon SET hp = 59 WHERE id = 1;")
+    db.execute("UPDATE pokemon SET hp = self.hp WHERE id = self.id;")
     #binding.pry
   end
 end
